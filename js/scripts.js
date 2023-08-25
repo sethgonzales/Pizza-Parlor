@@ -35,15 +35,25 @@ Pizza.prototype.totalCostCalc = function () {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-const customerName = document.querySelector("input#size-order").value;
 
+  const customerName = document.querySelector("input#customer-name").value;
+  const pizzaSize = document.querySelector("input[name=size-order]:checked").value;
+  const pizzaToppings = document.querySelectorAll("input[type=checkbox]:checked");
+  const toppingsArray = []
 
+  pizzaToppings.forEach(function (checkbox) {
+    toppingsArray.push(checkbox.value);
+  });
 
+  const myPizza = new Pizza(customerName, toppingsArray, pizzaSize);
+
+  document.getElementById("show-cost").removeAttribute("class");
+  document.getElementById("cost-value").innerText = myPizza.totalCostCalc();
 
 }
 
 
 
 window.addEventListener("load", function () {
-  document.querySelector("form#pizza-order").addEventListener("submit", handleFormSubmission);
+  document.querySelector("form#order-form").addEventListener("submit", handleFormSubmission);
 });

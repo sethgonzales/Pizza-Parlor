@@ -21,41 +21,44 @@
 
       <div class="form-group">
         <label for="customer-name">Name (first and last): </label>
-        <input type="text" id="customer-name" name="customer-name">
+        <input type="text" id="customer-name" name="customer-name" required>
       </div>
 
       <p>Choose your size: </p>
       <div class="form-group">
-        <input type="radio" id="size-order" name="size-order" value="Small">
-        <label for="size-order">Small</label>
-        <input type="radio" id="size-order" name="size-order" value="Medium">
-        <label for="size-order">Medium</label>
-        <input type="radio" id="size-order" name="size-order" value="Medium">
-        <label for="size-order">Large</label>
+        <input type="radio" id="size-small" name="size-order" value="Small" required>
+        <label for="size-small">Small</label>
+        <input type="radio" id="size-medium" name="size-order" value="Medium">
+        <label for="size-medium">Medium</label>
+        <input type="radio" id="size-large" name="size-order" value="Large">
+        <label for="size-large">Large</label>
       </div>
 
       <p>Choose your toppings: </p>
       <div class="form-group">
-        <input type="checkbox" id="topping1" name="topping1" value="Cheese">
-        <label for="topping1">Cheese</label><br>
-        <input type="checkbox" id="topping2" name="topping2" value="Pepperoni">
-        <label for="topping2">Pepperoni</label><br>
-        <input type="checkbox" id="topping3" name="topping3" value="Sausage">
-        <label for="topping3">Sausage</label><br>
-        <input type="checkbox" id="topping4" name="topping4" value="Olives">
-        <label for="topping4">Olives</label><br>
-        <input type="checkbox" id="topping5" name="topping5" value="Mushrooms">
-        <label for="topping5">Mushrooms</label><br>
-        <input type="checkbox" id="topping6" name="topping6" value="Tomatoes">
-        <label for="topping6">Tomatoes</label><br>
-        <input type="checkbox" id="topping7" name="topping7" value="Garlic">
-        <label for="topping7">Garlic</label><br>
+        <input type="checkbox" id="topping-cheese" name="topping1" value="Cheese">
+        <label for="topping-cheese">Cheese</label><br>
+        <input type="checkbox" id="topping-pepperoni" name="topping2" value="Pepperoni">
+        <label for="topping-pepperoni">Pepperoni</label><br>
+        <input type="checkbox" id="topping-sausage" name="topping3" value="Sausage">
+        <label for="topping-sausage">Sausage</label><br>
+        <input type="checkbox" id="topping-olives" name="topping4" value="Olives">
+        <label for="topping-olives">Olives</label><br>
+        <input type="checkbox" id="topping-mushrooms" name="topping5" value="Mushrooms">
+        <label for="topping-mushrooms">Mushrooms</label><br>
+        <input type="checkbox" id="topping-tomatoes" name="topping6" value="Tomatoes">
+        <label for="topping-tomatoes">Tomatoes</label><br>
+        <input type="checkbox" id="topping-garlic" name="topping7" value="Garlic">
+        <label for="topping-garlic">Garlic</label><br>
       </div>
       <button type="submit">Submit your Order!</button>
     </form>
   </div>
 
   <div id="show-cost" class="hidden">
+
+    <p>Your order of a <span id="size"></p>
+
     <p>Your total cost is: <span id="cost-value"></span></p>
   </div>
 
