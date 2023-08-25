@@ -48,8 +48,23 @@ function handleFormSubmission(event) {
   const myPizza = new Pizza(customerName, toppingsArray, pizzaSize);
 
   document.getElementById("show-cost").removeAttribute("class");
-  document.getElementById("cost-value").innerText = myPizza.totalCostCalc();
+  document.getElementById("size").innerText = myPizza.size;
+  
 
+  let toppingsString = "";
+  for (let i=0; i<toppingsArray.length; i++) {
+    if (toppingsArray.length === 2) {
+      toppingsString = toppingsArray[i] + " ";
+  } else if (i === toppingsArray.length - 1) {
+      toppingsString = toppingsString + "and " + toppingsArray[i];
+  } else {
+    toppingsString = toppingsArray[i] + ", " ;
+  }
+  }; 
+
+  document.getElementById("toppings").innerText = toppingsString;
+
+  document.getElementById("cost-value").innerText = myPizza.totalCostCalc();
 }
 
 
