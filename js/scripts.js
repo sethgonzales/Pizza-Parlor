@@ -32,6 +32,10 @@ Pizza.prototype.totalCostCalc = function () {
 };
 
 Pizza.prototype.toppingsToString = function() {
+  if (this.toppings.length === 0) {
+    return "just bread ";
+  }
+
   let toppingsString = "";
   for (let i = 0; i < this.toppings.length; i++) {
     if (this.toppings.length === 1) {
@@ -63,17 +67,17 @@ function handleFormSubmission(event) {
 
   const myPizza = new Pizza(customerName, toppingsArray, pizzaSize);
 
-  document.getElementById("form-container").setAttribute("class", "hidden");
+  document.getElementById("show-form").setAttribute("class", "hidden");
   document.getElementById("show-cost").removeAttribute("class");
-  document.getElementById("name").innerText = myPizza.name.toUpperCase() + ", ";
-  document.getElementById("size").innerText = myPizza.size.toLowerCase();
-  document.getElementById("toppings").innerText = myPizza.toppingsToString();
+  document.getElementById("show-name").innerText = myPizza.name.toUpperCase() + ", ";
+  document.getElementById("show-size").innerText = myPizza.size.toLowerCase();
+  document.getElementById("show-toppings").innerText = myPizza.toppingsToString();
   document.getElementById("cost-value").innerText = myPizza.totalCostCalc();
 }
 
 function goBack() {
   document.getElementById("order-form").reset();
-  document.getElementById("form-container").removeAttribute("class");
+  document.getElementById("show-form").removeAttribute("class");
   document.getElementById("show-cost").setAttribute("class", "hidden");
 }
 
