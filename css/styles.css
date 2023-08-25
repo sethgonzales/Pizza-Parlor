@@ -1,3 +1,44 @@
+
+body {
+  text-align: left;
+  margin: 2% 10%;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: #929292;
+  background-image:  repeating-linear-gradient(45deg, #f74545b3 25%, transparent 25%, transparent 75%, #f74545b3 75%, #f74545b3), repeating-linear-gradient(45deg, #f74545b3 25%, #ffffffb3 25%, #ffffffb3 75%, #f74545b3 75%, #f74545b3);
+  background-position: 0 0, 40px 40px;
+  background-size: 80px 80px;
+}
+
+#header-container{
+  float: left;
+  width:45%;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  font-size: larger;
+  box-sizing: border-box;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+#valentino-img {
+  width: 30%;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.679);
+  box-shadow: 0px 0px 8px 8px rgba(1, 1, 1, 0.304);
+}
+
+#form-container{
+  float: left;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 2px 2px 1px black;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 2%;
+  box-sizing: border-box;
+}
+
 .hidden {
   display: none;
 }
