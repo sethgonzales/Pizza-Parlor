@@ -80,6 +80,6 @@ function goBack() {
 
 window.addEventListener("load", function () {
   document.querySelector("form#order-form").addEventListener("submit", handleFormSubmission);
-  document.getElementById("back-button").addEventListener("click", goBack);
+  document.getElementById("go-back").addEventListener("click", goBack);
 
 });

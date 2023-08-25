@@ -13,14 +13,14 @@
   <div id="header-container">
     <img src="valentino.jpeg" id="valentino-img" alt="Valentino">
     <h1>Valentino's Pizzeria</h1>
-    <p>Mama Mia! It's the best pizza in town!</p>
+    <p><em>Mama Mia! It's the best pizza in town!</em></p>
   </div>
 
   <div id="form-container">
     <form id="order-form">
-      <p>Place your order: </p>
+      <p><strong>Place your order: </strong></p>
 
-      <div class="form-group">
+      <div id="form-group1">
         <label for="customer-name">Name (first and last): </label>
         <input type="text" id="customer-name" name="customer-name" required>
       </div>
@@ -52,15 +52,14 @@
         <input type="checkbox" id="topping-garlic" name="topping7" value="Garlic">
         <label for="topping-garlic">Garlic</label><br>
       </div>
-      <button type="submit">Submit your Order!</button>
+      <button type="submit" id="submit-button">Submit your Order!</button>
     </form>
   </div>
 
   <div id="show-cost" class="hidden">
-
     <p><span id="name"></span> your order of a <span id="size"></span> pizza with <span id="toppings"></span> has been placed!</p>
-    <p>Total: <span id="cost-value"></span></p>
-    <button type="button" id="back-button">Back</button>
+    <p><strong>Total: <span id="cost-value"></span></strong></p>
+    <button type="button" id="go-back">Back</button>
   </div>
 
 </body>
