@@ -35,7 +35,7 @@ Pizza.prototype.totalCostCalc = function () {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-
+const customerName = document.querySelector("input#size-order").value;
 
 
 

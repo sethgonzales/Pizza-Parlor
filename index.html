@@ -10,32 +10,32 @@
 </head>
 
 <body>
-  <div id="header">
+  <div id="header-container">
     <h1>Valentino's Pizzeria</h1>
     <p>Mama Mia! It's the best pizza in town!</p>
   </div>
-  <div id="main-body">
-    <p>Place your order: </p>
 
+  <div id="form-container">
     <form id="order-form">
-      
+      <p>Place your order: </p>
+
       <div class="form-group">
         <label for="customer-name">Name (first and last): </label>
         <input type="text" id="customer-name" name="customer-name">
       </div>
 
+      <p>Choose your size: </p>
       <div class="form-group">
-        <p>Choose your size: </p>
-        <label for="small">Small</label>
-        <input type="radio" id="small" name="size-order" value="Small">
-        <label for="medium">Medium</label>
-        <input type="radio" id="medium" name="size-order" value="Medium">
-        <label for="large">Large</label>
-        <input type="radio" id="large" name="size-order" value="Medium">
+        <input type="radio" id="size-order" name="size-order" value="Small">
+        <label for="size-order">Small</label>
+        <input type="radio" id="size-order" name="size-order" value="Medium">
+        <label for="size-order">Medium</label>
+        <input type="radio" id="size-order" name="size-order" value="Medium">
+        <label for="size-order">Large</label>
       </div>
 
+      <p>Choose your toppings: </p>
       <div class="form-group">
-        <p>Choose your toppings: </p>
         <input type="checkbox" id="topping1" name="topping1" value="Cheese">
         <label for="topping1">Cheese</label><br>
         <input type="checkbox" id="topping2" name="topping2" value="Pepperoni">
@@ -51,12 +51,14 @@
         <input type="checkbox" id="topping7" name="topping7" value="Garlic">
         <label for="topping7">Garlic</label><br>
       </div>
-
-
+      <button type="submit">Submit your Order!</button>
     </form>
+  </div>
 
+  <div id="show-cost" class="hidden">
+    <p>Your total cost is: <span id="cost-value"></span></p>
   </div>
-  </div>
+
 </body>
 
 </html>
