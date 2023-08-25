@@ -35,13 +35,12 @@ Pizza.prototype.totalCostCalc = function () {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  
+
+
+
+
+
 }
-
-
-
-
-
 
 
 
