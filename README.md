@@ -30,10 +30,10 @@ Code:
 Expected Output: toppingsCost = "$6"
 
 
-Describe: Pizza.prototype.totalPriceCalc()
+Describe: Pizza.prototype.totalCostCalc()
 <!-- Test 5 -->
 Test: "It should calculate the total cost of pizza size based on the toppings and size added to the order"
 Code: 
   const myPizza = new Pizza("Jeff", ["anchovies", "pineapple"], "medium");
-  myPizza.totalPriceCalc();
+  myPizza.totalCostCalc();
 Expected Output: totalCost = "$10"

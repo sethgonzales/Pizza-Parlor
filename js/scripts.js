@@ -26,7 +26,25 @@ Pizza.prototype.sizeCalc = function () {
   return sizeCost;
 };
 
-Pizza.prototype.totalPriceCalc = function () {
+Pizza.prototype.totalCostCalc = function () {
   this.totalCost = this.toppingsCalc() + this.sizeCalc();
   return "$" + this.totalCost;
 };
+
+//UI Logic
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+  
+}
+
+
+
+
+
+
+
+
+window.addEventListener("load", function () {
+  document.querySelector("form#pizza-order").addEventListener("submit", handleFormSubmission);
+});
