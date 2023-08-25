@@ -24,3 +24,10 @@ Code:
   const myPizza = new Pizza("Jeff", ["anchovies", "pineapple"], "medium");
   myPizza.sizeCalc();
 Expected Output: toppingsCost = "$6"
+
+Describe: Pizza.prototype.totalPriceCalc()
+Test: "It should calculate the total cost of pizza size based on the toppings and size added to the order"
+Code: 
+  const myPizza = new Pizza("Jeff", ["anchovies", "pineapple"], "medium");
+  myPizza.totalPriceCalc();
+Expected Output: totalCost = "$10"
