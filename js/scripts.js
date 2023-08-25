@@ -5,3 +5,10 @@ function Pizza(name, toppings, size) {
   this.size = size;
 }
 
+Pizza.prototype.toppingsCalc = function() {
+  let toppingsCost = 0;
+  this.toppings.forEach(function(topping) {
+    toppingsCost = toppingsCost + 2;
+  });
+  return "$" + toppingsCost;
+};
