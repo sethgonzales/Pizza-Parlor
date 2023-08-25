@@ -38,7 +38,7 @@ Code:
   myPizza.totalCostCalc();
 Expected Output: totalCost = "$10"
 
-
+<!-- Test 6 -->
 Describe Pizza.prototype.toppingsToString() {
   Test: "It list out pizza toppings with correct use of punctuation"
 Code: 
