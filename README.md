@@ -37,3 +37,12 @@ Code:
   const myPizza = new Pizza("Jeff", ["anchovies", "pineapple"], "medium");
   myPizza.totalCostCalc();
 Expected Output: totalCost = "$10"
+
+
+Describe Pizza.prototype.toppingsToString() {
+  Test: "It list out pizza toppings with correct use of punctuation"
+Code: 
+  const myPizza = new Pizza("Jeff", ["anchovies", "pineapple"], "medium");
+  myPizza.toppingsToString();
+Expected Output: toppingsString = "anchovies and pineapple"
+}

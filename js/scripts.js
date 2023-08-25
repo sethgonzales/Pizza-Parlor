@@ -31,22 +31,6 @@ Pizza.prototype.totalCostCalc = function () {
   return "$" + this.totalCost;
 };
 
-Pizza.prototype.toppingsToString = function () {
-  let toppingsString = "";
-  for (let i = 0; i < toppingsArray.length; i++) {
-    if (toppingsArray.length === 1) {
-      toppingsString = toppingsArray[i];
-    } else if (toppingsArray.length === 2) {
-      toppingsString = toppingsArray[0] + " and " + toppingsArray[1];
-    } else if (i === toppingsArray.length - 1) {
-      toppingsString += "and " + toppingsArray[i];
-    } else {
-      toppingsString += toppingsArray[i] + ", ";
-    }
-  }
-  return toppingsString;
-};
-
 //UI Logic
 
 function handleFormSubmission(event) {
@@ -62,12 +46,11 @@ function handleFormSubmission(event) {
 
   const myPizza = new Pizza(customerName, toppingsArray, pizzaSize);
 
-  let firstName
-
+  document.getElementById("form-container").setAttribute("class", "hidden");
   document.getElementById("show-cost").removeAttribute("class");
-  document.getElementById("name").innerText = myPizza.name.charAt(0).toUpperCase();
+  document.getElementById("name").innerText = myPizza.name.toUpperCase() + ", ";
   document.getElementById("size").innerText = myPizza.size.toLowerCase();
-  document.getElementById("toppings").innerText = myPizza.toppingsToString().toLowerCase();
+  document.getElementById("toppings").innerText = toppingsToString().toLowerCase();
   document.getElementById("cost-value").innerText = myPizza.totalCostCalc();
 }
 
