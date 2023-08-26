@@ -1,11 +1,13 @@
 //Business Logic
+
+//Pizza constructor
 function Pizza(name, toppings, size) {
   this.name = name;
   this.toppings = toppings;
   this.size = size;
   this.totalCost = 0;
 }
-
+//calculation prototypes 
 Pizza.prototype.toppingsCalc = function () {
   let toppingsCost = 0;
   this.toppings.forEach(function (topping) {
@@ -31,6 +33,7 @@ Pizza.prototype.totalCostCalc = function () {
   return "$" + this.totalCost;
 };
 
+//returning string of toppings
 Pizza.prototype.toppingsToString = function() {
   if (this.toppings.length === 0) {
     return "just bread ";
@@ -53,10 +56,11 @@ Pizza.prototype.toppingsToString = function() {
 
 
 //UI Logic
-
+//order form submission handler
 function handleFormSubmission(event) {
   event.preventDefault();
 
+  //gather input values from form
   const customerName = document.querySelector("input#customer-name").value;
   const pizzaSize = document.querySelector("input[name=size-order]:checked").value;
   const pizzaToppings = document.querySelectorAll("input[type=checkbox]:checked");
@@ -65,8 +69,10 @@ function handleFormSubmission(event) {
     toppingsArray.push(checkbox.value);
   });
 
+  //create new instance of Pizza
   const myPizza = new Pizza(customerName, toppingsArray, pizzaSize);
 
+  //update html with results of myPizza form data
   document.getElementById("show-form").setAttribute("class", "hidden");
   document.getElementById("show-cost").removeAttribute("class");
   document.getElementById("show-name").innerText = myPizza.name.toUpperCase() + ", ";
@@ -75,15 +81,15 @@ function handleFormSubmission(event) {
   document.getElementById("cost-value").innerText = myPizza.totalCostCalc();
 }
 
+//go back to original form that is now reset
 function goBack() {
   document.getElementById("order-form").reset();
   document.getElementById("show-form").removeAttribute("class");
   document.getElementById("show-cost").setAttribute("class", "hidden");
 }
 
-
+//listeners
 window.addEventListener("load", function () {
   document.querySelector("form#order-form").addEventListener("submit", handleFormSubmission);
   document.getElementById("go-back").addEventListener("click", goBack);
-
 });

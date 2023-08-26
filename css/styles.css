@@ -4,32 +4,53 @@
 
 body {
   margin: 2% 10%;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #929292;
-  background-image:  repeating-linear-gradient(45deg, #f74545b3 25%, transparent 25%, transparent 75%, #f74545b3 75%, #f74545b3), repeating-linear-gradient(45deg, #f74545b3 25%, #ffffffb3 25%, #ffffffb3 75%, #f74545b3 75%, #f74545b3);
+  background-image: repeating-linear-gradient(45deg, #f74545b3 25%, transparent 25%, transparent 75%, #f74545b3 75%, #f74545b3), repeating-linear-gradient(45deg, #f74545b3 25%, #ffffffb3 25%, #ffffffb3 75%, #f74545b3 75%, #f74545b3);
   background-position: 0 0, 40px 40px;
   background-size: 80px 80px;
 }
 
 .header-container {
-  float: left;
-  width: 45%;
-  margin: 2%;
-  padding: 0%;
-  color:white;
   text-align: center;
+  float: left;
+  width: auto;
+  margin: 2%;
+}
+
+.header-text {
+  background-color: white;
+  width: 90%;
+  padding: 2% 2%;
+  line-height: 75%;
+  color: black;
   font-weight: bold;
-  font-size: 150%;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  border-radius: 5%;
+  border: 1px solid rgba(0, 0, 0, 0.679);
   box-sizing: border-box;
 }
 
 .valentino-img {
-  width: 30%;
+  width: 50%;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.679);
   box-shadow: 0px 0px 8px 8px rgba(1, 1, 1, 0.304);
+  margin-left: -5%;
 }
+
+.valentino-img:hover {
+  animation: rotation 2.5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 
 .form-style {
   float: left;
@@ -83,4 +104,3 @@ body {
   color: white;
   cursor: pointer;
 }
-
