@@ -11,7 +11,7 @@ Valentino's Pizza Parlor
 
 ## Description
 
-This website takes an order input from an online customer of Valentino's Pizza Parlor and reports the total cost of the pizza pie, keeping in mind the size and the number of toppings added!
+Valentino's Pizza Parlor is a user friendly website for customers to place pizza orders online. Customers select their preferred toppings and size, and receive an estimated total cost of the pizza pie,
 
 ## Setup/Installation Requirements
 

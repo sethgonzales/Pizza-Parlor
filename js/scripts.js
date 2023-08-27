@@ -7,10 +7,10 @@ function Pizza(name, toppings, size) {
   this.size = size;
   this.totalCost = 0;
 }
-//calculation prototypes 
+//calculation prototypes, toppings, size, and total cost 
 Pizza.prototype.toppingsCalc = function () {
   let toppingsCost = 0;
-  this.toppings.forEach(function (topping) {
+  this.toppings.forEach(function () {
     toppingsCost = toppingsCost + 2;
   });
   return toppingsCost;
@@ -34,11 +34,10 @@ Pizza.prototype.totalCostCalc = function () {
 };
 
 //returning string of toppings
-Pizza.prototype.toppingsToString = function() {
+Pizza.prototype.toppingsToString = function () {
   if (this.toppings.length === 0) {
     return "just bread ";
   }
-
   let toppingsString = "";
   for (let i = 0; i < this.toppings.length; i++) {
     if (this.toppings.length === 1) {
@@ -64,7 +63,7 @@ function handleFormSubmission(event) {
   const customerName = document.querySelector("input#customer-name").value;
   const pizzaSize = document.querySelector("input[name=size-order]:checked").value;
   const pizzaToppings = document.querySelectorAll("input[type=checkbox]:checked");
-  const toppingsArray = []
+  const toppingsArray = [];
   pizzaToppings.forEach(function (checkbox) {
     toppingsArray.push(checkbox.value);
   });

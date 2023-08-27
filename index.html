@@ -11,22 +11,22 @@
 
 <body>
   <div class="header-container">
-    <img src="valentino.jpeg" class="valentino-img" alt="Owner Valentino the cat">
+    <img src="valentino.jpeg" class="valentino-img" alt="Owner, Valentino the cat">
     <div class="header-text">
       <h1>Valentino's Pizzeria</h1>
       <p><em>Meowma Mia! It's the best pizza in town!</em></p>
     </div>
   </div>
-
+  <!-- Start Form -->
   <div id="show-form">
     <form id="order-form" class="form-style">
       <p class="order-header">Place your order: </p>
-
+      <!-- Customer Name input -->
       <div class="form-group-name">
         <label for="customer-name">Name (first and last): </label>
         <input type="text" id="customer-name" name="customer-name" class="name-input-style" required>
       </div>
-
+      <!-- Pizza Size -->
       <p>Choose your size: </p>
       <div class="form-group">
         <input type="radio" id="size-small" name="size-order" value="Small" required>
@@ -36,7 +36,7 @@
         <input type="radio" id="size-large" name="size-order" value="Large">
         <label for="size-large">Large</label>
       </div>
-
+      <!-- Toppings -->
       <p>Choose your toppings: </p>
       <div class="form-group">
         <input type="checkbox" id="topping-cheese" name="topping1" value="Cheese">
